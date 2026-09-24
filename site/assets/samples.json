@@ -1,0 +1,34 @@
+{
+  "scenes": {
+    "coast": {
+      "title": "The quiet coast",
+      "description": "A generated panorama of a sandy coast in late-afternoon light",
+      "yaw": -90,
+      "pitch": 0,
+      "video": "assets/coast.mp4",
+      "poster": "assets/coast.jpg",
+      "excerpt": "Gentle ocean waves roll onto a broad sandy beach in warm late-afternoon light.",
+      "note": "Polar texture blur remains visible. Loop continuity and perceptual quality are still under evaluation."
+    },
+    "waterfall": {
+      "title": "Where water falls",
+      "description": "A generated waterfall and forest pool surrounded by tall trees",
+      "yaw": 90,
+      "pitch": 0,
+      "video": "assets/waterfall.mp4",
+      "poster": "assets/waterfall.jpg",
+      "excerpt": "A small broad waterfall cascades over a dark rock ledge into a clear forest pool beyond a flat gravel clearing.",
+      "note": "Repeated patterns and texture distortion remain near the sky and ground poles. The loop is an experimental sample."
+    },
+    "campfire": {
+      "title": "After the daylight",
+      "description": "A generated campfire at a forest campsite at blue hour",
+      "yaw": -140,
+      "pitch": -30,
+      "video": "assets/campfire.mp4",
+      "poster": "assets/campfire.jpg",
+      "excerpt": "A modest campfire burns inside a low circular ring of stones in a broad flat campsite at blue hour.",
+      "note": "Ground-pole distortion and loop-boundary changes remain visible. The original generated audio is quiet."
+    }
+  }
+}

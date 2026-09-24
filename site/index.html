@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#ffffff">
+  <title>GR360: Text-to-360° Audiovisual Loops</title>
+  <meta name="description" content="Create 360° video scenes from text, explore every direction, and listen to the accompanying audio.">
+  <meta property="og:title" content="GR360: Text-to-360° Audiovisual Loops">
+  <meta property="og:description" content="From a text prompt to a world you can look around and listen to. A project by Minjae Kim.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://jay0n9.github.io/gr360/">
+  <meta property="og:image" content="https://jay0n9.github.io/gr360/assets/social.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://jay0n9.github.io/gr360/">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;650;700;750;800&amp;family=Source+Sans+3:wght@400;500;600;650;700&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="viewer.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <main id="main">
+    <header class="paper-header wrap">
+      <h1><span class="project-name">GR360:</span> Text-to-360°<br>Audiovisual Loops</h1>
+      <p class="project-author">Minjae Kim</p>
+      <p class="project-status">Work in progress</p>
+      <nav class="resource-links" aria-label="Project sections">
+        <a href="#explore"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="m7 4 9 6-9 6Z"/></svg>Interactive demo</a>
+        <a href="#abstract"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M5 2h7l4 4v12H5Z"/><path d="M11 2v5h5M8 10h5M8 13h5"/></svg>Overview</a>
+        <a href="#features"><svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="7"/><ellipse cx="10" cy="10" rx="3" ry="7"/><path d="M3 10h14"/></svg>Features</a>
+      </nav>
+    </header>
+
+    <section class="teaser wrap" id="explore" aria-label="Interactive generated examples">
+      <div class="demo-intro"><span>Explore the generated world</span><span>Drag to look around <span aria-hidden="true">↔</span></span></div>
+      <div class="viewer" id="viewer" aria-busy="true">
+        <div class="viewport" id="viewport">
+          <img class="viewer-poster" id="viewer-poster" src="assets/coast.jpg" alt="A generated panorama of a sandy coast in late-afternoon light">
+          <video id="scene-video" class="source-video" loop playsinline preload="auto" aria-hidden="true"></video>
+          <canvas id="panorama" tabindex="0" aria-label="Interactive 360 degree scene. Drag or use arrow keys to look around. Press Home to reset the view."></canvas>
+          <div class="viewer-top"><span class="viewer-badge"><span class="live-dot"></span> <span id="view-label">360° panorama</span></span><div class="view-tools"><button id="projection" type="button" aria-pressed="false" title="Switch to the flat panorama" disabled>Flat view</button><button id="reset-view" type="button" title="Reset view" aria-label="Reset view" disabled>↺</button></div></div>
+          <div class="viewer-center" id="load-status" role="status">Loading the coast…</div>
+          <div class="viewer-error" id="viewer-error" role="alert" hidden><p id="error-message"></p><button type="button" id="retry">Try again</button><a id="fallback-link" href="assets/coast.mp4">Open the video</a></div>
+          <div class="viewer-caption"><div><span class="caption-kicker">Generated environment</span><h3 id="scene-title">The quiet coast</h3></div><span class="heading-readout" id="heading" aria-hidden="true">−90°</span></div>
+        </div>
+        <div class="player-controls">
+          <button class="play-button" id="play" type="button" disabled><span id="play-symbol" aria-hidden="true">▶</span><span id="play-label">Play scene</span></button>
+          <label class="sr-only" for="seek">Playback position</label><input id="seek" type="range" min="0" max="5" step="0.01" value="0" disabled>
+          <span class="clock" id="clock">0:00 / 0:05</span>
+          <button class="control-button" id="sound" type="button" aria-pressed="false" disabled><span aria-hidden="true">♪</span><span id="sound-label">Sound off</span></button>
+          <button class="control-button fullscreen-button" id="fullscreen" type="button" aria-label="Enter fullscreen" title="Fullscreen"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M8 3H3v5m13-5h5v5M3 16v5h5m13-5v5h-5"/></svg></button>
+        </div>
+      </div>
+      <div class="viewer-footnote"><p>Generated sample <span>·</span> 2048 × 1024 <span>·</span> 5-second loop</p><p>Drag to look around. Turn on sound to listen.</p></div>
+      <div class="scene-list" role="group" aria-label="Choose a generated scene">
+        <button class="scene-card is-active" type="button" data-scene="coast" aria-pressed="true"><div class="scene-image"><img src="assets/coast.jpg" alt="Sunlit waves on a broad sandy beach" width="640" height="360"><span class="scene-selected">Selected <span aria-hidden="true">↗</span></span></div><div class="scene-card-text"><div><span class="scene-environment">Ocean / late afternoon</span><h3>The quiet coast</h3></div><span class="scene-arrow" aria-hidden="true">↗</span></div></button>
+        <button class="scene-card" type="button" data-scene="waterfall" aria-pressed="false"><div class="scene-image"><img src="assets/waterfall.jpg" alt="A broad waterfall surrounded by green forest" width="640" height="360" loading="lazy"><span class="scene-selected">Selected <span aria-hidden="true">↗</span></span></div><div class="scene-card-text"><div><span class="scene-environment">Forest / flowing water</span><h3>Where water falls</h3></div><span class="scene-arrow" aria-hidden="true">↗</span></div></button>
+        <button class="scene-card" type="button" data-scene="campfire" aria-pressed="false"><div class="scene-image"><img src="assets/campfire.jpg" alt="An orange campfire at a forest campsite at blue hour" width="640" height="360" loading="lazy"><span class="scene-selected">Selected <span aria-hidden="true">↗</span></span></div><div class="scene-card-text"><div><span class="scene-environment">Campsite / blue hour</span><h3>After the daylight</h3></div><span class="scene-arrow" aria-hidden="true">↗</span></div></button>
+      </div>
+
+      <div class="sample-caption"><p id="prompt-excerpt">“Gentle ocean waves roll onto a broad sandy beach in warm late-afternoon light.”</p><p id="scene-note" class="sample-note"></p></div>
+      <p class="teaser-caption"><strong>GR360</strong> explores how a single text prompt can become a 360° video with accompanying audio. Look in any direction and replay each five-second scene.</p>
+      <noscript><p>Enable JavaScript for the 360° viewer, or watch a video directly: <a href="assets/coast.mp4">Coast</a>, <a href="assets/waterfall.mp4">Waterfall</a>, <a href="assets/campfire.mp4">Campfire</a>.</p></noscript>
+    </section>
+
+    <section class="overview-section section" id="abstract" aria-labelledby="overview-title">
+      <div class="reading-width"><h2 id="overview-title">Overview</h2>
+      <p>GR360 turns text descriptions into 360° video scenes with accompanying audio. Describe an environment, then look around the generated scene and listen to its atmosphere.</p>
+      <p>The demos bring together panoramic views, environmental motion, and sound in short, repeating clips. Explore a quiet coast, a forest waterfall, or a campfire at dusk directly in your browser.</p></div>
+    </section>
+
+    <section class="features-section section wrap" id="features" aria-labelledby="features-title">
+      <h2 id="features-title">Project Features</h2>
+      <p class="section-lead">From a written scene to an environment you can explore.</p>
+      <div class="feature-grid">
+        <article class="feature"><div class="feature-icon" aria-hidden="true"><svg viewBox="0 0 80 64"><g fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="40" cy="32" r="25"/><ellipse cx="40" cy="32" rx="11" ry="25"/><ellipse cx="40" cy="32" rx="25" ry="9"/><path d="M15 32h50M40 7v50"/></g></svg></div><h3>Text to 360°</h3><p>Turn a scene description into a panoramic video. Look around in every direction from one viewpoint.</p></article>
+        <article class="feature"><div class="feature-icon" aria-hidden="true"><svg viewBox="0 0 80 64"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 27v10m9-18v26m9-33v40m10-29v18m10-29v40m9-33v26m9-18v10"/></g></svg></div><h3>Video with audio</h3><p>Hear the scene as you explore it: waves on the shore, rushing water, or a crackling fire.</p></article>
+        <article class="feature"><div class="feature-icon" aria-hidden="true"><svg viewBox="0 0 80 64"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M61 23a23 23 0 0 0-41-6L14 25m0-14v14h14M19 41a23 23 0 0 0 41 6l6-8m0 14V39H52"/></g></svg></div><h3>Looping scenes</h3><p>Replay short moments of environmental motion and sound, with time to explore the surroundings.</p></article>
+      </div>
+    </section>
+
+    <section class="results-section section" aria-labelledby="results-title"><div class="wrap">
+      <h2 id="results-title">Panoramic Outputs</h2>
+      <p class="section-lead">The full equirectangular frames behind the interactive scenes.</p>
+      <div class="panorama-gallery">
+        <figure><a href="?scene=coast#explore" aria-label="Explore the coast in 360 degrees"><img src="assets/coast-erp.jpg" alt="Full equirectangular view of the coast" width="1024" height="512" loading="lazy"></a><figcaption>The quiet coast</figcaption></figure>
+        <figure><a href="?scene=waterfall#explore" aria-label="Explore the waterfall in 360 degrees"><img src="assets/waterfall-erp.jpg" alt="Full equirectangular view of a forest waterfall" width="1024" height="512" loading="lazy"></a><figcaption>Where water falls</figcaption></figure>
+        <figure><a href="?scene=campfire#explore" aria-label="Explore the campfire in 360 degrees"><img src="assets/campfire-erp.jpg" alt="Full equirectangular view of an evening campfire" width="1024" height="512" loading="lazy"></a><figcaption>After the daylight</figcaption></figure>
+      </div>
+      <p class="figure-note">Selected demos · 2048 × 1024 · 5 seconds · stereo audio</p>
+    </div></section>
+
+    <section class="section reading-width limitations" id="limitations" aria-labelledby="limitations-title">
+      <h2 id="limitations-title">About the Demos</h2>
+      <p>These demos are a work in progress. Distortion, stretched textures, and repeated patterns can appear near the poles. Motion and appearance changes may remain at the loop boundary.</p>
+      <p>Audio plays in stereo and does not change with your viewing direction. Use the sound button to listen and drag the video to look around.</p>
+    </section>
+
+</main>
+  <footer class="site-footer"><div class="reading-width"><p><strong>GR360</strong> · Minjae Kim</p><p>Page layout inspired by <a href="https://horwitz.ai/spectral_detuning" target="_blank" rel="noopener noreferrer">Spectral DeTuning</a>.</p><p><a href="https://github.com/jay0n9/gr360" target="_blank" rel="noopener noreferrer">Project page repository</a> · <a href="#main">Back to top ↑</a></p></div></footer>
+</body>
+</html>
