@@ -121,6 +121,7 @@
       if (!response.ok) throw new Error('metadata');
       const data = await response.json();
       samples = data.scenes;
+      document.querySelectorAll('[data-listen]').forEach(button => { button.disabled = !Object.hasOwn(samples, button.dataset.listen); });
       const requested = new URLSearchParams(location.search).get('scene');
       selectScene(Object.hasOwn(samples, requested) ? requested : currentKey);
     } catch { showError('Scene details could not load. Check your connection and try again.'); }
@@ -148,6 +149,20 @@
   });
   $('retry').addEventListener('click', () => samples ? selectScene(currentKey) : initialize());
   document.querySelectorAll('[data-scene]').forEach(button => button.addEventListener('click', () => selectScene(button.dataset.scene)));
+  document.querySelectorAll('[data-listen]').forEach(button => button.addEventListener('click', async () => {
+    const key = button.dataset.listen;
+    if (!samples?.[key]) return;
+    if (currentKey !== key) selectScene(key);
+    else if (video.readyState >= 1) video.currentTime = 0;
+    video.muted = false;
+    // Request playback within the user's click so sound is explicitly enabled.
+    const playback = video.play();
+    $('viewer').scrollIntoView({ behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'instant' : 'smooth', block: 'center' });
+    try { await playback; }
+    catch (error) {
+      if (currentKey === key && error.name !== 'AbortError') showError('Use Play scene to start this example, or open the video directly.');
+    }
+  }));
   for (const event of ['play', 'pause', 'ended']) video.addEventListener(event, updatePlay);
   for (const event of ['timeupdate', 'seeked']) video.addEventListener(event, updateClock);
   video.addEventListener('volumechange', updateSound);

@@ -9,6 +9,7 @@ Text-to-360° audiovisual loops — a project by Minjae Kim.
 - Generate panoramic video scenes from text descriptions.
 - Generate spatial audio that places sounds within the 360° environment.
 - Replay short environmental scenes in an interactive browser viewer.
+- Inspect audiovisual correspondence in qualitative examples with one-click sound playback.
 
 This repository contains the public project website and selected demo media only.
 The research implementation, generation scripts, model details, and experiment
@@ -16,6 +17,7 @@ records are not included.
 
 The site is published from `main` to GitHub Pages. Browser JavaScript provides
 video playback and interactive panorama viewing. The current web demos play a
-stereo preview; they do not yet demonstrate spatial audio playback.
+stereo preview; they do not yet demonstrate spatial audio playback. The examples
+are qualitative, with no numerical accuracy or sound-localization scores reported.
 
 Page layout inspired by [Spectral DeTuning](https://horwitz.ai/spectral_detuning).
