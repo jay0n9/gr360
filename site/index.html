@@ -5,9 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#ffffff">
   <title>GR360: Text-to-360° Audiovisual Loops</title>
-  <meta name="description" content="Text-to-360° video, spatial audio generation, and looping environments. Explore the GR360 project and its interactive demos.">
+  <meta name="description" content="Text-to-360° video and spatial audio. Explore interactive audiovisual examples.">
   <meta property="og:title" content="GR360: Text-to-360° Audiovisual Loops">
-  <meta property="og:description" content="360° video, spatial audio, and looping environments from text. A project by Minjae Kim.">
+  <meta property="og:description" content="360° video and spatial audio. A project by Minjae Kim.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://jay0n9.github.io/gr360/">
   <meta property="og:image" content="https://jay0n9.github.io/gr360/assets/social.jpg">
@@ -70,7 +70,7 @@
     <section class="overview-section section" id="abstract" aria-labelledby="overview-title">
       <div class="reading-width"><h2 id="overview-title">Overview</h2>
       <p>GR360 brings together text-to-360° video, spatial audio generation, and looping environments. Describe a scene to create a world of surrounding images and sound.</p>
-      <p>The demos bring together panoramic views, environmental motion, and sound in short, repeating clips. Explore a quiet coast, a forest waterfall, or a campfire at dusk directly in your browser.</p></div>
+      <p>Explore the relationship between the generated visuals and sounds in the coast, waterfall, and campfire demos below.</p></div>
     </section>
 
     <section class="features-section section wrap" id="features" aria-labelledby="features-title">
@@ -80,8 +80,20 @@
         <article class="feature"><div class="feature-icon" aria-hidden="true"><svg viewBox="0 0 80 64"><g fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="40" cy="32" r="25"/><ellipse cx="40" cy="32" rx="11" ry="25"/><ellipse cx="40" cy="32" rx="25" ry="9"/><path d="M15 32h50M40 7v50"/></g></svg></div><h3>Text to 360°</h3><p>Turn a scene description into a panoramic video. Look around in every direction from one viewpoint.</p></article>
         <article class="feature"><div class="feature-icon" aria-hidden="true"><svg viewBox="0 0 80 64"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 27v10m9-18v26m9-33v40m10-29v18m10-29v40m9-33v26m9-18v10"/></g></svg></div><h3>Spatial Audio</h3><p>Generate spatial audio for 360° scenes, placing sounds within the surrounding environment.</p></article>
         <article class="feature"><div class="feature-icon" aria-hidden="true"><svg viewBox="0 0 80 64"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M61 23a23 23 0 0 0-41-6L14 25m0-14v14h14M19 41a23 23 0 0 0 41 6l6-8m0 14V39H52"/></g></svg></div><h3>Looping scenes</h3><p>Replay short moments of environmental motion and sound, with time to explore the surroundings.</p></article>
+        <article class="feature"><div class="feature-icon" aria-hidden="true"><svg viewBox="0 0 80 64"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M10 22h17l6-9 9 18 7-9h21M10 44h13l6-6 8 12 10-19 8 13h15M40 5v54" stroke-dasharray="0"/><circle cx="40" cy="22" r="4" fill="white"/><circle cx="40" cy="44" r="4" fill="white"/></g></svg></div><h3>Audio–Visual Alignment</h3><p>Watch and listen to inspect how visual events correspond to the generated sounds.</p><a class="feature-link" href="#alignment">See and hear the examples <span aria-hidden="true">↓</span></a></article>
       </div>
     </section>
+
+    <section class="alignment-section section" id="alignment" aria-labelledby="alignment-title"><div class="wrap">
+      <h2 id="alignment-title">See and Hear the Alignment</h2>
+      <p class="section-lead">Explore the correspondence between generated motion and sound.</p>
+      <div class="alignment-grid">
+        <article class="alignment-example"><img src="assets/coast.jpg" alt="Waves rolling onto a sandy coast" width="640" height="360" loading="lazy"><h3>Waves &amp; surf</h3><p>Watch the waves meet the sand and listen for the surf.</p><button type="button" class="listen-button" data-listen="coast" disabled aria-label="Watch coast with sound"><span aria-hidden="true">▶</span> Watch with sound</button></article>
+        <article class="alignment-example"><img src="assets/waterfall.jpg" alt="A waterfall flowing through the forest" width="640" height="360" loading="lazy"><h3>Waterfall &amp; rushing water</h3><p>Watch the flowing waterfall and listen to the water.</p><button type="button" class="listen-button" data-listen="waterfall" disabled aria-label="Watch waterfall with sound"><span aria-hidden="true">▶</span> Watch with sound</button></article>
+        <article class="alignment-example"><img src="assets/campfire.jpg" alt="Flames around a campfire at dusk" width="640" height="360" loading="lazy"><h3>Flames &amp; fire sounds</h3><p>Watch the flames flicker and listen for the fire's crackle.</p><button type="button" class="listen-button" data-listen="campfire" disabled aria-label="Watch campfire with sound"><span aria-hidden="true">▶</span> Watch with sound</button></article>
+      </div>
+      <p class="alignment-note">Qualitative audiovisual examples. Numerical accuracy and sound-localization scores are not reported here.</p>
+    </div></section>
 
     <section class="results-section section" aria-labelledby="results-title"><div class="wrap">
       <h2 id="results-title">Panoramic Outputs</h2>
