@@ -17,3 +17,25 @@
 /* Two selected demos. */
 .scene-list{grid-template-columns:repeat(2,minmax(0,1fr))}.scene-image img{height:auto!important;aspect-ratio:2/1;object-fit:cover}
 @media(min-width:541px){.alignment-grid,.panorama-gallery{grid-template-columns:repeat(2,minmax(0,1fr))}}
+
+
+/* The scene description leads directly into the generated environment. */
+.paper-header{padding:42px 0 34px}
+.hero-project{color:var(--blue);font-family:var(--display);font-size:24px;font-weight:800;letter-spacing:-.6px;margin-bottom:12px}
+.paper-header .environment-headline{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:center;gap:0 18px;font-size:clamp(32px,4.5vw,54px);line-height:1.16;letter-spacing:-1.7px}
+.headline-from{white-space:nowrap}
+.headline-arrow{color:var(--blue);font-weight:400;margin-left:9px}
+.hero-description{font-size:21px;line-height:1.5;margin:18px auto 0;max-width:720px;color:var(--text)}
+.paper-header .project-author{font-size:20px;margin-top:19px}
+.paper-header .project-status{font-size:15px}
+.paper-header .resource-links{margin-top:20px}
+.text-environment-bridge{display:grid;grid-template-columns:minmax(0,1fr) 40px 230px;align-items:center;gap:22px;border-top:1px solid var(--line);padding:23px 0 22px}
+.scene-text{border-left:3px solid var(--blue);padding-left:16px}
+.flow-label{display:block;font-family:var(--display);font-size:12px;font-weight:700;color:var(--blue);margin-bottom:5px}
+.scene-text #prompt-excerpt{font-family:var(--body);font-size:20px!important;font-style:normal;line-height:1.4!important;margin:0 0 5px!important;max-width:590px;color:var(--ink)}
+.description-caption{display:block;font-size:12px;line-height:1.4;color:var(--muted)}
+.flow-arrow{font-family:var(--display);font-size:31px;font-weight:400;text-align:center;color:var(--blue)}
+.environment-result p{font-family:var(--display);font-size:18px;font-weight:600;line-height:1.4;color:var(--ink);margin-bottom:5px}
+@media(max-width:800px){.paper-header .environment-headline{font-size:41px;gap:0 12px}.hero-description{font-size:19px}.text-environment-bridge{grid-template-columns:minmax(0,1fr) 26px 190px;gap:15px}.scene-text #prompt-excerpt{font-size:18px!important}.environment-result p{font-size:16px}}
+@media(max-width:540px){.paper-header{padding:30px 0 25px}.hero-project{font-size:20px;margin-bottom:9px}.paper-header .environment-headline{font-size:32px;letter-spacing:-1px;gap:3px 12px}.headline-to{flex-basis:100%}.hero-description{font-size:17px;margin-top:13px;max-width:340px}.paper-header .project-author{font-size:18px;margin-top:15px}.paper-header .project-status{font-size:13px}.paper-header .resource-links{margin-top:16px}.text-environment-bridge{grid-template-columns:25px minmax(0,1fr);gap:12px 9px;padding:18px 0}.scene-text{grid-column:1/-1;padding-left:12px}.scene-text #prompt-excerpt{font-size:17px!important}.flow-arrow{font-size:24px;transform:rotate(90deg)}.environment-result .flow-label{margin-bottom:1px}.environment-result p{font-size:15px;margin:0}.environment-result .description-caption{display:none}.description-caption{font-size:11px}.flow-label{font-size:11px}}
+@media(max-width:350px){.paper-header .environment-headline{font-size:28px}.hero-description{font-size:16px}}
