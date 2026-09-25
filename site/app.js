@@ -2,9 +2,11 @@
   'use strict';
   const $ = id => document.getElementById(id);
   const video = $('scene-video');
-  let samples, currentKey = 'coast', panorama, controller, flat = false, webglAvailable = true;
+  let samples, currentKey = 'courtyard-bluehour', panorama, controller, flat = false, webglAvailable = true;
   video.muted = true;
   video.volume = 0.7;
+  const spatial = new SpatialAudioPlayer(video, updateSound, message => { $('scene-note').textContent = message; });
+  window.gr360Audio = spatial;
   function updateClock() {
     const duration = Number.isFinite(video.duration) ? video.duration : 5;
     const time = video.currentTime || 0;
@@ -19,9 +21,11 @@
     $('play').setAttribute('aria-label', video.paused ? 'Play scene' : 'Pause scene');
   }
   function updateSound() {
-    $('sound-label').textContent = video.muted ? 'Sound off' : 'Sound on';
-    $('sound').setAttribute('aria-pressed', String(!video.muted));
-    $('sound').setAttribute('aria-label', video.muted ? 'Turn sound on' : 'Mute sound');
+    const enabled = spatial.enabled;
+    $('sound-label').textContent = !enabled ? 'Sound off' : spatial.mode === 'foa' ? (spatial.loading ? 'Loading spatial audio…' : 'Spatial sound on') : 'Sound on';
+    $('sound').setAttribute('aria-pressed', String(enabled));
+    $('sound').setAttribute('aria-label', enabled ? 'Mute sound' : 'Turn sound on');
+    $('sound').title = spatial.mode === 'foa' ? 'Spatial audio preview · use headphones and look around' : 'Original stereo audio';
   }
   function setBusy(busy) {
     $('viewer').setAttribute('aria-busy', String(busy));
@@ -55,7 +59,7 @@
     $('view-label').title = message;
   }
   try {
-    panorama = new PanoramaViewer($('panorama'), video, yaw => { $('heading').textContent = `${Math.round(yaw)}°`; }, useFlatFallback);
+    panorama = new PanoramaViewer($('panorama'), video, (yaw, pitch) => { $('heading').textContent = `${Math.round(yaw)}°`; spatial.orient(yaw, pitch); }, useFlatFallback);
   } catch (error) { useFlatFallback(error.message); }
   function resetView() {
     const scene = samples?.[currentKey];
@@ -79,8 +83,10 @@
     $('viewer-poster').hidden = false;
     $('scene-title').textContent = scene.title;
     $('prompt-excerpt').textContent = `“${scene.excerpt}”`;
-    $('scene-note').textContent = scene.note;
+    $('scene-note').textContent = [scene.visualReview?.summary, scene.note].filter(Boolean).join(' ');
+    spatial.select(scene, signal);
     $('fallback-link').href = scene.video;
+    $('fallback-link').textContent = scene.foa ? 'Open the video without spatial audio' : 'Open the video';
     document.querySelectorAll('[data-scene]').forEach(button => {
       const selected = button.dataset.scene === key;
       button.classList.toggle('is-active', selected);
@@ -130,7 +136,7 @@
     try { if (video.paused) await video.play(); else video.pause(); }
     catch { showError('Playback could not start in this browser. Try again or open the video directly.'); }
   });
-  $('sound').addEventListener('click', () => { video.muted = !video.muted; });
+  $('sound').addEventListener('click', () => spatial.setEnabled(!spatial.enabled));
   $('seek').addEventListener('input', () => { video.currentTime = Number($('seek').value); updateClock(); });
   $('projection').addEventListener('click', () => changeProjection(!flat));
   $('reset-view').addEventListener('click', resetView);
@@ -154,7 +160,7 @@
     if (!samples?.[key]) return;
     if (currentKey !== key) selectScene(key);
     else if (video.readyState >= 1) video.currentTime = 0;
-    video.muted = false;
+    spatial.setEnabled(true);
     // Request playback within the user's click so sound is explicitly enabled.
     const playback = video.play();
     $('viewer').scrollIntoView({ behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'instant' : 'smooth', block: 'center' });
