@@ -19,8 +19,8 @@ The site is published from `main` to GitHub Pages. Browser JavaScript provides
 video playback, interactive panorama viewing, and a spatial audio preview.
 
 The selected demos are **Blue hour in the courtyard** (stereo audio),
-**Morning on the silver lake**, and **Peach light on the cove** (spatial audio
-that follows the viewing direction).
+**Morning on the silver lake**, **Peach light on the cove**, and
+**A quiet jade garden** (spatial audio that follows the viewing direction).
 Use headphones for the spatial preview. The examples are qualitative; perceptual
 audio quality, source separation, and localization accuracy have not been validated.
 

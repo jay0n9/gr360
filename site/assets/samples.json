@@ -37,6 +37,20 @@
         "url": "assets/peach-cove-foa.wav",
         "sha256": "a486fadfb5d913ad37c4ca3c988a78ce8df0dc4349974e171eef16e06edd7009"
       }
+    },
+    "jade-cascade": {
+      "title": "A quiet jade garden",
+      "description": "A small clear waterfall among emerald moss, bamboo and pink azaleas",
+      "yaw": 130,
+      "pitch": -12,
+      "video": "assets/jade-cascade.mp4",
+      "poster": "assets/jade-cascade.jpg",
+      "excerpt": "A small waterfall, emerald moss and bamboo in a quiet garden after rain.",
+      "note": "Spatial audio preview. Use headphones and look around. Audio quality is under review.",
+      "foa": {
+        "url": "assets/jade-cascade-foa.wav",
+        "sha256": "7918d613724de2f859dc49c927c2c8687668ba9177dce569e932fb340cb24d3a"
+      }
     }
   }
 }
