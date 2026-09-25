@@ -16,8 +16,11 @@ The research implementation, generation scripts, model details, and experiment
 records are not included.
 
 The site is published from `main` to GitHub Pages. Browser JavaScript provides
-video playback and interactive panorama viewing. The current web demos play a
-stereo preview; they do not yet demonstrate spatial audio playback. The examples
-are qualitative, with no numerical accuracy or sound-localization scores reported.
+video playback, interactive panorama viewing, and a spatial audio preview.
+
+The selected demos are **Blue hour in the courtyard** (stereo audio) and
+**Morning on the silver lake** (spatial audio that follows the viewing direction).
+Use headphones for the spatial preview. The examples are qualitative; perceptual
+audio quality, source separation, and localization accuracy have not been validated.
 
 Page layout inspired by [Spectral DeTuning](https://horwitz.ai/spectral_detuning).
