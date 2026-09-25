@@ -2,7 +2,7 @@
 
 [Project page](https://jay0n9.github.io/gr360/)
 
-Text-to-360° audiovisual loops — a project by Minjae Kim.
+From text to 360° environments you can look around and listen to — a project by Minjae Kim.
 
 ## Features
 

@@ -4,10 +4,10 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#ffffff">
-  <title>GR360: Text-to-360° Audiovisual Loops</title>
-  <meta name="description" content="Text-to-360° video and spatial audio. Explore interactive audiovisual examples.">
-  <meta property="og:title" content="GR360: Text-to-360° Audiovisual Loops">
-  <meta property="og:description" content="360° video and spatial audio. A project by Minjae Kim.">
+  <title>GR360: Text to 360° Environments</title>
+  <meta name="description" content="From a written scene to a 360° environment you can look around and listen to. Explore generated video and spatial audio with GR360.">
+  <meta property="og:title" content="GR360: Text to 360° Environments">
+  <meta property="og:description" content="Text to 360° environments. Describe a scene, look around, and listen. A project by Minjae Kim.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://jay0n9.github.io/gr360/">
   <meta property="og:image" content="https://jay0n9.github.io/gr360/assets/social.jpg">
@@ -27,7 +27,9 @@
   <a class="skip-link" href="#main">Skip to content</a>
   <main id="main">
     <header class="paper-header wrap">
-      <h1><span class="project-name">GR360:</span> Text-to-360°<br>Audiovisual Loops</h1>
+      <p class="hero-project">GR360</p>
+      <h1 class="environment-headline"><span class="headline-from">Text <span class="headline-arrow" aria-hidden="true">→</span><span class="sr-only"> to </span></span><span class="headline-to">360° Environments</span></h1>
+      <p class="hero-description">Describe a scene. Experience it in 360° video and sound.</p>
       <p class="project-author">Minjae Kim</p>
       <p class="project-status">Work in progress</p>
       <nav class="resource-links" aria-label="Project sections">
@@ -38,7 +40,11 @@
     </header>
 
     <section class="teaser wrap" id="explore" aria-label="Interactive generated examples">
-      <div class="demo-intro"><span>Explore the generated world</span><span>Drag to look around <span aria-hidden="true">↔</span></span></div>
+      <div class="text-environment-bridge" aria-label="From a text description to a generated environment">
+        <div class="scene-text"><span class="flow-label">Text</span><p id="prompt-excerpt">“A quiet fountain and orange trees in a rain-washed courtyard at blue hour.”</p><span class="description-caption">Example scene description</span></div>
+        <span class="flow-arrow" aria-hidden="true">→</span>
+        <div class="environment-result"><span class="flow-label">360° Environment</span><p>Look around &amp; listen</p><span class="description-caption">Explore the generated scene below</span></div>
+      </div>
       <div class="viewer" id="viewer" aria-busy="true">
         <div class="viewport" id="viewport">
           <img class="viewer-poster" id="viewer-poster" src="assets/courtyard-bluehour.jpg" alt="A stone fountain, wet mosaic tiles and orange trees at blue hour">
@@ -63,8 +69,8 @@
         <button class="scene-card" type="button" data-scene="silverlake-morning" aria-pressed="false"><div class="scene-image"><img src="assets/silverlake-morning.jpg" alt="Misty mountain water and silver birches in the soft light of sunrise" width="640" height="320"><span class="scene-selected">Selected <span aria-hidden="true">↗</span></span></div><div class="scene-card-text"><div><span class="scene-environment">Mountain lake / sunrise · Spatial audio</span><h3>Morning on the silver lake</h3></div><span class="scene-arrow" aria-hidden="true">↗</span></div></button>
       </div>
 
-      <div class="sample-caption"><p id="prompt-excerpt">“A quiet fountain and orange trees in a rain-washed courtyard at blue hour.”</p><p id="scene-note" class="sample-note"></p></div>
-      <p class="teaser-caption"><strong>GR360</strong> explores how a single text prompt can become a 360° video with accompanying audio. Look in any direction and replay each five-second scene.</p>
+      <div class="sample-caption"><p id="scene-note" class="sample-note"></p></div>
+      <p class="teaser-caption"><strong>From text to an environment you can experience.</strong> Look around the generated scene, turn on sound, and replay each five-second moment.</p>
       <noscript><p>Enable JavaScript for the interactive scenes. Direct videos: <a href="assets/courtyard-bluehour.mp4">Courtyard with stereo audio</a>, <a href="assets/silverlake-morning.mp4">Silver lake video</a>. The silver lake spatial audio requires the interactive viewer.</p></noscript>
     </section>
 
