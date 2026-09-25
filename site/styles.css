@@ -6,7 +6,7 @@
 @media(max-width:350px){.paper-header h1{font-size:28px}.resource-links{gap:6px}.resource-links a{font-size:10px;padding-inline:8px}.resource-links svg{width:12px}.demo-intro>span:first-child{font-size:10px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation:none!important;transition:none!important}}
 
-.feature-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:38px;text-align:center;margin-top:30px}.feature-icon{height:78px;display:flex;justify-content:center;align-items:center;color:var(--blue);margin-bottom:15px}.feature-icon svg{width:80px;height:64px}.feature h3{font-size:19px;margin-bottom:10px}.feature p{font-size:17px;line-height:1.6}.limitations{padding-bottom:54px}
+.feature-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:38px;text-align:center;margin-top:30px}.feature-icon{height:78px;display:flex;justify-content:center;align-items:center;color:var(--blue);margin-bottom:15px}.feature-icon svg{width:80px;height:64px}.feature h3{font-size:19px;margin-bottom:10px}.feature p{font-size:17px;line-height:1.6}.limitations{padding-bottom:54px}
 @media(max-width:700px){.feature-grid{gap:22px}.feature h3{font-size:16px}.feature p{font-size:15px}}
 @media(max-width:540px){.feature-grid{grid-template-columns:1fr;gap:27px;max-width:330px;margin-inline:auto}.feature-icon{height:62px;margin-bottom:10px}.feature-icon svg{height:55px}.feature h3{font-size:19px;margin-bottom:8px}.feature p{font-size:16px}.limitations{padding-bottom:36px}}
 
@@ -15,8 +15,8 @@
 @media(max-width:540px){.alignment-grid{grid-template-columns:1fr;gap:30px;max-width:380px;margin:auto}.alignment-example h3{font-size:19px;margin-top:13px}.alignment-example p{font-size:16px;min-height:0}.listen-button{font-size:12px;margin-top:12px}.alignment-note{font-size:12px}.feature-grid{row-gap:27px}}
 
 /* Two selected demos. */
-.scene-list{grid-template-columns:repeat(2,minmax(0,1fr))}.scene-image img{height:auto!important;aspect-ratio:2/1;object-fit:cover}
-@media(min-width:541px){.alignment-grid,.panorama-gallery{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.scene-list{grid-template-columns:repeat(3,minmax(0,1fr))}.scene-image img{height:auto!important;aspect-ratio:2/1;object-fit:cover}
+@media(min-width:541px){.alignment-grid,.panorama-gallery{grid-template-columns:repeat(3,minmax(0,1fr))}}
 
 
 /* The scene description leads directly into the generated environment. */

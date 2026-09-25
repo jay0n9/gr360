@@ -23,6 +23,20 @@
         "url": "assets/silverlake-morning-foa.wav",
         "sha256": "3919a7d12b28e523559f9b8df13451562dd7d938cc29f2a55879ad4f4c58f751"
       }
+    },
+    "peach-cove": {
+      "title": "Peach light on the cove",
+      "description": "Peach sunset over clear turquoise water, pale sand and gently moving palm trees",
+      "yaw": -45,
+      "pitch": -5,
+      "video": "assets/peach-cove.mp4",
+      "poster": "assets/peach-cove.jpg",
+      "excerpt": "Peach sunset light across a tropical cove, clear water and palm trees.",
+      "note": "Spatial audio preview. Use headphones and look around. Audio quality is under review.",
+      "foa": {
+        "url": "assets/peach-cove-foa.wav",
+        "sha256": "a486fadfb5d913ad37c4ca3c988a78ce8df0dc4349974e171eef16e06edd7009"
+      }
     }
   }
 }
