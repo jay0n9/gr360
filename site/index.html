@@ -17,7 +17,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;650;700;750;800&amp;family=Source+Sans+3:wght@400;500;600;650;700&amp;display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+  <!-- Change the CSS version whenever styles change so cached pages use matching styles. -->
+  <link rel="stylesheet" href="styles.css?v=a1a8c637286a">
   <script src="viewer.js" defer></script>
   <script src="foa-preview-decoder.js" defer></script>
   <script src="spatial-audio.js" defer></script>
@@ -41,8 +42,8 @@
 
     <section class="teaser wrap" id="explore" aria-label="Interactive generated examples">
       <div class="text-environment-bridge" aria-label="From a text description to a generated environment">
-        <div class="scene-text"><span class="flow-label">Text</span><p id="prompt-excerpt">“A quiet fountain and orange trees in a rain-washed courtyard at blue hour.”</p><span class="description-caption">Example scene description</span></div>
-        <span class="flow-arrow" aria-hidden="true">→</span>
+        <div class="scene-text"><span class="flow-label">Text</span><p id="prompt-excerpt" class="scene-description">“A quiet fountain and orange trees in a rain-washed courtyard at blue hour.”</p><span class="description-caption">Example scene description</span></div>
+        <svg class="flow-arrow" width="28" height="28" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 16h24m-8-8 8 8-8 8"/></svg>
         <div class="environment-result"><span class="flow-label">360° Environment</span><p>Look around &amp; listen</p><span class="description-caption">Explore the generated scene below</span></div>
       </div>
       <div class="viewer" id="viewer" aria-busy="true">
