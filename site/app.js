@@ -82,6 +82,7 @@
     $('viewer-poster').alt = scene.description;
     $('viewer-poster').hidden = false;
     $('scene-title').textContent = scene.title;
+    $('scene-resolution').textContent = 'Loading…';
     $('prompt-excerpt').textContent = `“${scene.excerpt}”`;
     $('scene-note').textContent = [scene.visualReview?.summary, scene.note].filter(Boolean).join(' ');
     spatial.select(scene, signal);
@@ -107,6 +108,7 @@
       $('load-status').hidden = true;
       $('viewer-error').hidden = true;
       setBusy(false);
+      $('scene-resolution').textContent = `${video.videoWidth} × ${video.videoHeight}`;
       updateClock();
       if (panorama) panorama.dirty = true;
       if (resume) { try { await video.play(); } catch { updatePlay(); } }
@@ -123,7 +125,7 @@
   }
   async function initialize() {
     try {
-      const response = await fetch('assets/samples.json');
+      const response = await fetch('assets/samples.json?v=e3152c3f7c87');
       if (!response.ok) throw new Error('metadata');
       const data = await response.json();
       samples = data.scenes;

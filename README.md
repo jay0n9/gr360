@@ -26,3 +26,7 @@ Use headphones for the spatial preview. The examples are qualitative; perceptual
 audio quality, source separation, and localization accuracy have not been validated.
 
 Page layout inspired by [Spectral DeTuning](https://horwitz.ai/spectral_detuning).
+
+Morning on the silver lake and Peach light on the cove use 4096 × 2048 upscaled
+video, with their original spatial audio preserved. The other demos remain
+2048 × 1024. All clips are five seconds long.
