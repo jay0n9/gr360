@@ -125,7 +125,7 @@
   }
   async function initialize() {
     try {
-      const response = await fetch('assets/samples.json?v=e3152c3f7c87');
+      const response = await fetch('assets/samples.json?v=d35d8cf361f7');
       if (!response.ok) throw new Error('metadata');
       const data = await response.json();
       samples = data.scenes;
