@@ -43,10 +43,10 @@
       "description": "A small clear waterfall among emerald moss, bamboo and pink azaleas",
       "yaw": 130,
       "pitch": -12,
-      "video": "assets/jade-cascade.mp4",
-      "poster": "assets/jade-cascade.jpg",
+      "video": "assets/jade-cascade.mp4?v=65a217473287",
+      "poster": "assets/jade-cascade.jpg?v=65a217473287",
       "excerpt": "A small waterfall, emerald moss and bamboo in a quiet garden after rain.",
-      "note": "Spatial audio preview. Use headphones and look around. Audio quality is under review.",
+      "note": "4K upscaled video. Spatial audio preview. Use headphones and look around. Audio quality is under review.",
       "foa": {
         "url": "assets/jade-cascade-foa.wav",
         "sha256": "7918d613724de2f859dc49c927c2c8687668ba9177dce569e932fb340cb24d3a"
@@ -57,10 +57,10 @@
       "description": "A clear mountain stream, fir trees and rose-lit snowy peaks",
       "yaw": -85,
       "pitch": -12,
-      "video": "assets/alpine-rose.mp4",
-      "poster": "assets/alpine-rose.jpg",
+      "video": "assets/alpine-rose.mp4?v=7cd2a2a25c41",
+      "poster": "assets/alpine-rose.jpg?v=7cd2a2a25c41",
       "excerpt": "A clear stream winds through a wildflower meadow beneath fir trees and rose-lit alpine peaks.",
-      "note": "Spatial audio preview. Use headphones and look around. Audio quality is under review.",
+      "note": "4K upscaled video. Spatial audio preview. Use headphones and look around. Audio quality is under review.",
       "foa": {
         "url": "assets/alpine-rose-foa.wav",
         "sha256": "1b2caa23ff289fe80cef45cffeee92f3f020acc9fdbd193a2fed1f0fcfde8c9b"
