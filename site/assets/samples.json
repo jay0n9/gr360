@@ -15,10 +15,10 @@
       "description": "Misty mountain water and silver birches in the soft light of sunrise",
       "yaw": 0,
       "pitch": -3,
-      "video": "assets/silverlake-morning.mp4",
-      "poster": "assets/silverlake-morning.jpg",
+      "video": "assets/silverlake-morning.mp4?v=7cdf11f8d072",
+      "poster": "assets/silverlake-morning.jpg?v=7cdf11f8d072",
       "excerpt": "Soft sunrise light across a misty mountain lake and silver birch trees.",
-      "note": "Spatial audio preview. Use headphones and look around to hear the sound direction change.",
+      "note": "4K upscaled video. Spatial audio preview. Use headphones and look around to hear the sound direction change.",
       "foa": {
         "url": "assets/silverlake-morning-foa.wav",
         "sha256": "3919a7d12b28e523559f9b8df13451562dd7d938cc29f2a55879ad4f4c58f751"
@@ -29,10 +29,10 @@
       "description": "Peach sunset over clear turquoise water, pale sand and gently moving palm trees",
       "yaw": -45,
       "pitch": -5,
-      "video": "assets/peach-cove.mp4",
-      "poster": "assets/peach-cove.jpg",
+      "video": "assets/peach-cove.mp4?v=df7b32326082",
+      "poster": "assets/peach-cove.jpg?v=df7b32326082",
       "excerpt": "Peach sunset light across a tropical cove, clear water and palm trees.",
-      "note": "Spatial audio preview. Use headphones and look around. Audio quality is under review.",
+      "note": "4K upscaled video. Spatial audio preview. Use headphones and look around. Audio quality is under review.",
       "foa": {
         "url": "assets/peach-cove-foa.wav",
         "sha256": "a486fadfb5d913ad37c4ca3c988a78ce8df0dc4349974e171eef16e06edd7009"
