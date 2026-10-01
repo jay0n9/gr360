@@ -1,4 +1,4 @@
-# GR360
+# OmniEnv360
 
 [Project page](https://jay0n9.github.io/gr360/)
 
