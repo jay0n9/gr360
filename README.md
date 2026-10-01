@@ -1,6 +1,6 @@
 # OmniEnv360
 
-[Project page](https://jay0n9.github.io/gr360/)
+[Project page](https://jay0n9.github.io/OmniEnv360/)
 
 From text to 360° environments you can look around and listen to — a project by Minjae Kim.
 
