@@ -22,7 +22,6 @@
 /* The scene description leads directly into the generated environment. */
 .paper-header{padding:42px 0 34px}
 .hero-project{color:var(--blue);font-family:var(--display);font-size:24px;font-weight:800;letter-spacing:-.6px;margin-bottom:12px}
-.hero-project{display:flex;align-items:center;justify-content:center;gap:10px}.project-icon{width:36px;height:36px;flex:none}
 .paper-header .environment-headline{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:center;gap:0 18px;font-size:clamp(32px,4.5vw,54px);line-height:1.16;letter-spacing:-1.7px}
 .headline-from{white-space:nowrap}
 .headline-arrow{color:var(--blue);font-weight:400;margin-left:9px}

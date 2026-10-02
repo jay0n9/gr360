@@ -1,4 +1,4 @@
-name: Deploy OmniEnv360 to GitHub Pages
+name: Deploy GR360 to GitHub Pages
 on:
   push:
     branches: [main]
