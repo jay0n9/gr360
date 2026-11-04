@@ -40,3 +40,28 @@
 @media(max-width:800px){.paper-header .environment-headline{font-size:41px;gap:0 12px}.hero-description{font-size:19px}.text-environment-bridge{grid-template-columns:minmax(0,1fr) 26px minmax(0,190px);gap:15px}.scene-description{font-size:18px}.environment-result p{font-size:16px}}
 @media(max-width:540px){.paper-header{padding:30px 0 25px}.hero-project{font-size:20px;margin-bottom:9px}.paper-header .environment-headline{font-size:32px;letter-spacing:-1px;gap:3px 12px}.headline-to{flex-basis:100%}.hero-description{font-size:17px;margin-top:13px;max-width:340px}.paper-header .project-author{font-size:18px;margin-top:15px}.paper-header .project-status{font-size:13px}.paper-header .resource-links{margin-top:16px}.text-environment-bridge{grid-template-columns:25px minmax(0,1fr);gap:12px 9px;padding:18px 0}.scene-text{grid-column:1/-1;padding-left:12px}.scene-description{font-size:17px}.flow-arrow{width:24px;height:24px;transform:rotate(90deg)}.environment-result .flow-label{margin-bottom:1px}.environment-result p{font-size:15px;margin:0}.environment-result .description-caption{display:none}.description-caption{font-size:11px}.flow-label{font-size:11px}}
 @media(max-width:350px){.paper-header .environment-headline{font-size:28px}.hero-description{font-size:16px}}
+/* OmniEnv360 brand and the twenty final scenes. */
+.hero-project{display:flex;align-items:center;justify-content:center;gap:10px}.project-icon{width:36px;height:36px;flex:none}
+.scene-description{font-size:18px}
+.source-panel{margin-top:18px;border-top:1px solid var(--line);padding-top:16px}
+.source-bar{display:flex;flex-wrap:wrap;align-items:center;gap:8px 10px;font-family:var(--display);font-size:12px}
+.source-label{font-weight:700;color:var(--blue)}
+.source-chips{display:flex;flex-wrap:wrap;gap:8px}
+.source-chip{display:inline-flex;align-items:center;gap:7px;min-height:34px;padding:6px 12px;border:1px solid var(--line);border-radius:999px;background:var(--soft);color:var(--ink);font-family:var(--display);font-size:12px;font-weight:600;transition:border-color .15s,background .15s}
+.source-chip::before{content:'';width:7px;height:7px;border-radius:50%;background:var(--blue)}
+.source-chip:hover{border-color:var(--blue);background:#fff}
+.source-chip:disabled{cursor:not-allowed}
+.source-bed{color:var(--muted)}
+.prompt-details{margin-top:12px;font-size:14px;line-height:1.55}
+.prompt-details summary{cursor:pointer;font-family:var(--display);font-size:12px;font-weight:600;color:var(--blue);width:max-content;max-width:100%}
+.prompt-list{display:grid;grid-template-columns:minmax(0,170px) minmax(0,1fr);gap:8px 16px;margin:12px 0 0;padding:14px 16px;background:var(--soft);border-radius:6px}
+.prompt-list dt{font-family:var(--display);font-size:12px;font-weight:650;color:var(--ink);padding-top:2px}
+.prompt-list dd{margin:0;color:var(--text)}
+.prompt-omitted{font-size:12px;color:var(--muted);margin-top:8px}
+.scene-list-title{font-size:20px;margin:40px 0 0;text-align:left;letter-spacing:-.3px}
+.scene-list{grid-template-columns:repeat(4,minmax(0,1fr))}
+.scene-image img{height:auto!important;aspect-ratio:2/1}
+.scene-card h3{font-size:15px!important}
+.scene-sources{display:block;font-size:11px;color:var(--muted);margin-top:3px;font-family:var(--display)}
+@media(max-width:800px){.scene-list{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:540px){.scene-list{grid-template-columns:repeat(2,minmax(0,1fr))}.scene-card h3{font-size:13px!important}.scene-sources{font-size:10px}.scene-list-title{font-size:18px;margin-top:30px}.source-bar{font-size:11px}.prompt-list{grid-template-columns:minmax(0,1fr);gap:2px;padding:12px}.prompt-list dd+dt{margin-top:8px}}

@@ -2,11 +2,11 @@
   'use strict';
   const $ = id => document.getElementById(id);
   const video = $('scene-video');
-  let samples, currentKey = 'courtyard-bluehour', panorama, controller, flat = false, webglAvailable = true;
+  let samples, currentKey = 'taiko', panorama, controller, flat = false, webglAvailable = true;
   video.muted = true;
   video.volume = 0.7;
   const spatial = new SpatialAudioPlayer(video, updateSound, message => { $('scene-note').textContent = message; });
-  window.gr360Audio = spatial;
+  window.omniEnv360Audio = spatial;
   function updateClock() {
     const duration = Number.isFinite(video.duration) ? video.duration : 5;
     const time = video.currentTime || 0;
@@ -65,6 +65,34 @@
     const scene = samples?.[currentKey];
     if (scene && panorama) panorama.setView(scene.yaw, scene.pitch);
   }
+  // Each sounding object gets a button that turns the 360° view toward it.
+  function lookToward(source) {
+    if (!panorama || !webglAvailable) return;
+    if (flat) changeProjection(false);
+    panorama.setView(source.yaw, source.pitch);
+  }
+  function showSources(scene) {
+    $('source-chips').replaceChildren(...scene.sources.map(source => {
+      const button = document.createElement('button');
+      button.type = 'button';
+      button.className = 'source-chip';
+      button.textContent = source.label;
+      button.disabled = !webglAvailable;
+      button.setAttribute('aria-label', `Look toward the ${source.label.toLowerCase()}`);
+      button.addEventListener('click', () => lookToward(source));
+      return button;
+    }));
+    const entry = (label, text) => {
+      const term = document.createElement('dt'), detail = document.createElement('dd');
+      term.textContent = label;
+      detail.textContent = text;
+      return [term, detail];
+    };
+    $('prompt-list').replaceChildren(
+      ...entry('Scene (video and audio)', scene.prompt),
+      ...scene.sources.flatMap(source => entry(source.label, source.prompt)),
+      ...entry(`${scene.ambience.label} (all around)`, scene.ambience.prompt));
+  }
   function selectScene(key) {
     if (!samples?.[key]) return;
     const resume = !video.paused;
@@ -85,9 +113,10 @@
     $('scene-resolution').textContent = 'Loading…';
     $('prompt-excerpt').textContent = `“${scene.excerpt}”`;
     $('scene-note').textContent = [scene.visualReview?.summary, scene.note].filter(Boolean).join(' ');
+    showSources(scene);
     spatial.select(scene, signal);
     $('fallback-link').href = scene.video;
-    $('fallback-link').textContent = scene.foa ? 'Open the video without spatial audio' : 'Open the video';
+    $('fallback-link').textContent = scene.foa ? 'Open the video with stereo sound' : 'Open the video';
     document.querySelectorAll('[data-scene]').forEach(button => {
       const selected = button.dataset.scene === key;
       button.classList.toggle('is-active', selected);
@@ -125,7 +154,7 @@
   }
   async function initialize() {
     try {
-      const response = await fetch('assets/samples.json?v=d35d8cf361f7');
+      const response = await fetch('assets/samples.json?v=71b32ecdb265');
       if (!response.ok) throw new Error('metadata');
       const data = await response.json();
       samples = data.scenes;

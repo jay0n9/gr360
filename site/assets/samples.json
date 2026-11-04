@@ -1,69 +1,743 @@
 {
   "scenes": {
-    "courtyard-bluehour": {
-      "title": "Blue hour in the courtyard",
-      "description": "A stone fountain, wet mosaic tiles and orange trees at blue hour",
-      "yaw": -36,
+    "taiko": {
+      "title": "Taiko at the lantern festival",
+      "environment": "Festival courtyard / dusk",
+      "description": "An open stone festival courtyard at dusk with paper lanterns. A drummer strikes a large taiko drum while a man strikes a hanging bronze gong.",
+      "excerpt": "An open stone festival courtyard at dusk with paper lanterns. A drummer strikes a large taiko drum while a man strikes a hanging bronze gong.",
+      "prompt": "A stationary eye-level wide view of an open stone festival courtyard at dusk with paper lanterns. A drummer in a white headband swings two thick sticks and strikes a large taiko drum on a wooden stand in a strong steady pattern, while on the other side of the courtyard a man strikes a large hanging bronze gong with a padded mallet every few seconds and the gong visibly shakes. Deep booming taiko drum hits and long shimmering crashes of the gong.",
+      "yaw": 93.1,
+      "pitch": -9.2,
+      "video": "assets/taiko.mp4",
+      "poster": "assets/taiko.jpg",
+      "thumb": "assets/taiko-thumb.jpg",
+      "note": "Spatial audio preview. Use headphones and look around, or use the buttons below to face each sound.",
+      "sources": [
+        {
+          "key": "drum",
+          "label": "Taiko drum",
+          "yaw": 117.0,
+          "pitch": -9.0,
+          "prompt": "A drummer strikes a large taiko drum with two thick sticks in a strong steady pattern. Deep booming drum hits, each one punchy and separate. No speech, music or additional sound sources."
+        },
+        {
+          "key": "gong",
+          "label": "Gong",
+          "yaw": 69.3,
+          "pitch": -9.4,
+          "prompt": "A man strikes a large hanging bronze gong with a padded mallet every few seconds. Long shimmering metallic gong crashes that ring and decay. No speech, music or additional sound sources."
+        }
+      ],
+      "ambience": {
+        "label": "Ambience",
+        "prompt": "Quiet evening courtyard ambience with a light breeze and faint distant crowd murmur. No speech, music, drums, gong or additional sound sources."
+      },
+      "foa": {
+        "url": "assets/taiko-foa.wav",
+        "sha256": "b5613c4b9487658b39535fb143a62b5112c30628c17202fa9f49b1ec4dd2bbcd"
+      }
+    },
+    "smithy": {
+      "title": "Sparks in the forge",
+      "environment": "Blacksmith forge / firelit",
+      "description": "A dim stone forge lit by a coal hearth. A blacksmith hammers a glowing iron bar on the anvil while a grinding wheel throws sparks.",
+      "excerpt": "A dim stone forge lit by a coal hearth. A blacksmith hammers a glowing iron bar on the anvil while a grinding wheel throws sparks.",
+      "prompt": "A stationary eye-level wide view inside a dim stone blacksmith forge lit by a glowing coal hearth. A single blacksmith in a leather apron stands at the only anvil in the room and strikes a glowing red iron bar with a heavy hammer in a steady rhythm, sparks flying with every blow, while against the opposite wall a large grinding wheel spins and throws a stream of orange sparks from a blade held against it. Loud ringing metallic hammer blows on the anvil and the harsh continuous screech of the grinding wheel.",
+      "yaw": 14.4,
       "pitch": -15,
-      "video": "assets/courtyard-bluehour.mp4",
-      "poster": "assets/courtyard-bluehour.jpg",
-      "excerpt": "A quiet fountain and orange trees in a rain-washed courtyard at blue hour.",
-      "note": "Stereo audio. Turn on sound to hear the courtyard."
-    },
-    "silverlake-morning": {
-      "title": "Morning on the silver lake",
-      "description": "Misty mountain water and silver birches in the soft light of sunrise",
-      "yaw": 0,
-      "pitch": -3,
-      "video": "assets/silverlake-morning.mp4?v=7cdf11f8d072",
-      "poster": "assets/silverlake-morning.jpg?v=7cdf11f8d072",
-      "excerpt": "Soft sunrise light across a misty mountain lake and silver birch trees.",
-      "note": "4K upscaled video. Spatial audio preview. Use headphones and look around to hear the sound direction change.",
+      "video": "assets/smithy.mp4",
+      "poster": "assets/smithy.jpg",
+      "thumb": "assets/smithy-thumb.jpg",
+      "note": "Spatial audio preview. Use headphones and look around, or use the buttons below to face each sound.",
+      "sources": [
+        {
+          "key": "anvil",
+          "label": "Anvil",
+          "yaw": 14.4,
+          "pitch": -15.3,
+          "prompt": "A blacksmith strikes a glowing iron bar on an anvil with a heavy hammer in a steady rhythm. Loud ringing metallic hammer blows, each one separate. No speech, music or additional sound sources."
+        },
+        {
+          "key": "grinder",
+          "label": "Grinding wheel",
+          "yaw": 117.0,
+          "pitch": -13.5,
+          "prompt": "A large grinding wheel spins and throws sparks from a blade held against it. Harsh continuous metallic screech and whine. No speech, music or additional sound sources."
+        }
+      ],
+      "ambience": {
+        "label": "Ambience",
+        "prompt": "Quiet forge room tone with a soft crackle of hearth coals. No speech, music, hammering, grinding or additional sound sources."
+      },
       "foa": {
-        "url": "assets/silverlake-morning-foa.wav",
-        "sha256": "3919a7d12b28e523559f9b8df13451562dd7d938cc29f2a55879ad4f4c58f751"
+        "url": "assets/smithy-foa.wav",
+        "sha256": "159b3f49ebf0f700d335a43916b34df93ce6c6c4f84a74f151244e97e6cdc483"
       }
     },
-    "peach-cove": {
-      "title": "Peach light on the cove",
-      "description": "Peach sunset over clear turquoise water, pale sand and gently moving palm trees",
-      "yaw": -45,
-      "pitch": -5,
-      "video": "assets/peach-cove.mp4?v=df7b32326082",
-      "poster": "assets/peach-cove.jpg?v=df7b32326082",
-      "excerpt": "Peach sunset light across a tropical cove, clear water and palm trees.",
-      "note": "4K upscaled video. Spatial audio preview. Use headphones and look around. Audio quality is under review.",
+    "woodyard": {
+      "title": "Splitting logs in the farmyard",
+      "environment": "Farm yard / day",
+      "description": "A sunny farm yard with a wooden barn. A man splits logs on a stump with an axe while a small black dog barks by the fence.",
+      "excerpt": "A sunny farm yard with a wooden barn. A man splits logs on a stump with an axe while a small black dog barks by the fence.",
+      "prompt": "A stationary eye-level wide view of a sunny farm yard with a wooden barn and a split-rail fence. A man in a plaid shirt swings an axe overhead and splits logs on a tree stump, each swing cracking a log into two halves that fall to the ground, while a small black dog stands by the fence and barks a few times. Sharp loud cracks of the axe splitting wood and short clear dog barks.",
+      "yaw": 136.8,
+      "pitch": -4.5,
+      "video": "assets/woodyard.mp4",
+      "poster": "assets/woodyard.jpg",
+      "thumb": "assets/woodyard-thumb.jpg",
+      "note": "Spatial audio preview. Use headphones and look around, or use the buttons below to face each sound.",
+      "sources": [
+        {
+          "key": "axe",
+          "label": "Axe",
+          "yaw": 136.8,
+          "pitch": -4.5,
+          "prompt": "A man swings an axe overhead and splits logs on a tree stump. Sharp loud cracks of the axe hitting and splitting dry wood, each one separate. No speech, music or additional sound sources."
+        },
+        {
+          "key": "dog",
+          "label": "Dog",
+          "yaw": 9.9,
+          "pitch": -10.8,
+          "prompt": "A small black dog stands by a wooden fence and barks a few times. Short clear dog barks. No speech, music or additional sound sources."
+        }
+      ],
+      "ambience": {
+        "label": "Ambience",
+        "prompt": "Quiet sunny farm ambience with light wind and faint distant birdsong. No speech, music, chopping, barking or additional sound sources."
+      },
       "foa": {
-        "url": "assets/peach-cove-foa.wav",
-        "sha256": "a486fadfb5d913ad37c4ca3c988a78ce8df0dc4349974e171eef16e06edd7009"
+        "url": "assets/woodyard-foa.wav",
+        "sha256": "e77358802ea695496dc7bcd70b315ee7b67250fc26816c29ea0ee06bf20289aa"
       }
     },
-    "jade-cascade": {
-      "title": "A quiet jade garden",
-      "description": "A small clear waterfall among emerald moss, bamboo and pink azaleas",
-      "yaw": 130,
-      "pitch": -12,
-      "video": "assets/jade-cascade.mp4?v=65a217473287",
-      "poster": "assets/jade-cascade.jpg?v=65a217473287",
-      "excerpt": "A small waterfall, emerald moss and bamboo in a quiet garden after rain.",
-      "note": "4K upscaled video. Spatial audio preview. Use headphones and look around. Audio quality is under review.",
+    "dragon": {
+      "title": "The dragon's crystal cavern",
+      "environment": "Fantasy cavern · stylized",
+      "description": "A vast cavern lit by glowing blue crystals. A red dragon roars with a burst of flame while a black iron cauldron bubbles with green liquid.",
+      "excerpt": "A vast cavern lit by glowing blue crystals. A red dragon roars with a burst of flame while a black iron cauldron bubbles with green liquid.",
+      "prompt": "A vast fantasy cavern lit by glowing blue crystals. A large red dragon perches on a rock ledge and every few seconds lets out a loud roar with a burst of flame from its jaws, while on the other side of the cavern a black iron cauldron bubbles and pops with glowing green liquid over a small fire. Loud deep dragon roars with a whoosh of flame, and thick bubbling and popping of the cauldron.",
+      "yaw": 102.6,
+      "pitch": -1.8,
+      "video": "assets/dragon.mp4",
+      "poster": "assets/dragon.jpg",
+      "thumb": "assets/dragon-thumb.jpg",
+      "note": "Spatial audio preview. Use headphones and look around, or use the buttons below to face each sound.",
+      "sources": [
+        {
+          "key": "dragon",
+          "label": "Dragon",
+          "yaw": 102.6,
+          "pitch": -1.8,
+          "prompt": "A large red dragon on a rock ledge roars every few seconds with a burst of flame. Loud deep roars and a whoosh of fire. No speech, music or additional sound sources."
+        },
+        {
+          "key": "cauldron",
+          "label": "Cauldron",
+          "yaw": -158.4,
+          "pitch": -15.3,
+          "prompt": "A black iron cauldron bubbles and pops with glowing green liquid over a small fire. Thick bubbling, popping and a soft crackle. No speech, music or additional sound sources."
+        }
+      ],
+      "ambience": {
+        "label": "Ambience",
+        "prompt": "Deep cavern room tone with faint dripping water echoes. No speech, music, roars, bubbling or additional sound sources."
+      },
       "foa": {
-        "url": "assets/jade-cascade-foa.wav",
-        "sha256": "7918d613724de2f859dc49c927c2c8687668ba9177dce569e932fb340cb24d3a"
+        "url": "assets/dragon-foa.wav",
+        "sha256": "3b102e0664e215d2475a107b5861e4211c40f1f00b80e6579bb728223c9a949d"
       }
     },
-    "alpine-rose": {
-      "title": "Rose dawn in the alpine meadow",
-      "description": "A clear mountain stream, fir trees and rose-lit snowy peaks",
-      "yaw": -85,
-      "pitch": -12,
-      "video": "assets/alpine-rose.mp4?v=7cd2a2a25c41",
-      "poster": "assets/alpine-rose.jpg?v=7cd2a2a25c41",
-      "excerpt": "A clear stream winds through a wildflower meadow beneath fir trees and rose-lit alpine peaks.",
-      "note": "4K upscaled video. Spatial audio preview. Use headphones and look around. Audio quality is under review.",
+    "plaza": {
+      "title": "Bucket drums in the plaza",
+      "environment": "City plaza / day",
+      "description": "A sunny city plaza with stone paving and cafés. A street drummer beats upturned buckets while a red popcorn cart pops fresh popcorn.",
+      "excerpt": "A sunny city plaza with stone paving and cafés. A street drummer beats upturned buckets while a red popcorn cart pops fresh popcorn.",
+      "prompt": "A stationary eye-level view of a sunny city plaza with stone paving and cafes. A street drummer sits on a crate and beats a set of upturned plastic buckets with drumsticks in a fast steady rhythm, while on the other side of the plaza a red popcorn cart pops fresh popcorn behind its glass. Sharp punchy bucket drum hits and the rapid crackling pops of the popcorn machine.",
+      "yaw": 10.8,
+      "pitch": -15,
+      "video": "assets/plaza.mp4",
+      "poster": "assets/plaza.jpg",
+      "thumb": "assets/plaza-thumb.jpg",
+      "note": "Spatial audio preview. Use headphones and look around, or use the buttons below to face each sound.",
+      "sources": [
+        {
+          "key": "drummer",
+          "label": "Street drummer",
+          "yaw": 10.8,
+          "pitch": -20.7,
+          "prompt": "A street drummer beats upturned plastic buckets with drumsticks in a fast steady rhythm. Sharp punchy bucket drum hits. No speech, melody or additional sound sources."
+        },
+        {
+          "key": "popcorn",
+          "label": "Popcorn cart",
+          "yaw": 108.0,
+          "pitch": -7.2,
+          "prompt": "A red popcorn cart pops fresh popcorn behind its glass. Rapid crackling pops and a soft heater hum. No speech, music or additional sound sources."
+        }
+      ],
+      "ambience": {
+        "label": "Ambience",
+        "prompt": "Light daytime city plaza ambience with faint distant traffic and a breeze. No speech, music, drums, popping or additional sound sources."
+      },
       "foa": {
-        "url": "assets/alpine-rose-foa.wav",
-        "sha256": "1b2caa23ff289fe80cef45cffeee92f3f020acc9fdbd193a2fed1f0fcfde8c9b"
+        "url": "assets/plaza-foa.wav",
+        "sha256": "6cccaac41116c6911cf7483e27a7c1f2b4c38b869fe76468556684bf0cdfc2d4"
+      }
+    },
+    "temple": {
+      "title": "Temple bell in the rain",
+      "environment": "Temple courtyard / rainy evening",
+      "description": "A Korean Buddhist temple courtyard on a rainy evening. A monk strikes a huge bronze bell with a wooden log while rainwater pours into a stone basin.",
+      "excerpt": "A Korean Buddhist temple courtyard on a rainy evening. A monk strikes a huge bronze bell with a wooden log while rainwater pours into a stone basin.",
+      "prompt": "A stationary eye-level view of a Korean Buddhist temple courtyard on a rainy evening, with wooden halls and curved tiled roofs. Inside an open wooden pavilion a monk swings a hanging wooden log and strikes a huge bronze temple bell every few seconds, the log visibly swinging back, while on the other side rainwater pours steadily from the corner of a tiled roof into a stone basin. Deep long resonant temple bell booms and the splashing of rainwater pouring into the basin.",
+      "yaw": 104.4,
+      "pitch": 1.8,
+      "video": "assets/temple.mp4",
+      "poster": "assets/temple.jpg",
+      "thumb": "assets/temple-thumb.jpg",
+      "note": "Spatial audio preview. Use headphones and look around, or use the buttons below to face each sound.",
+      "sources": [
+        {
+          "key": "bell",
+          "label": "Temple bell",
+          "yaw": 104.4,
+          "pitch": 1.8,
+          "prompt": "A monk swings a hanging wooden log and strikes a huge bronze temple bell every few seconds. Deep long resonant booming bell strikes. No speech, music or additional sound sources."
+        },
+        {
+          "key": "basin",
+          "label": "Stone basin",
+          "yaw": -48.6,
+          "pitch": -9.9,
+          "prompt": "Rainwater pours from the corner of a tiled roof into a stone basin. Steady splashing and pouring water. No speech, music or additional sound sources."
+        }
+      ],
+      "ambience": {
+        "label": "Ambience",
+        "prompt": "Soft steady rain falling on a temple courtyard. No speech, music, bells, pouring water or additional sound sources."
+      },
+      "foa": {
+        "url": "assets/temple-foa.wav",
+        "sha256": "2d3e39a35b74848208f61fa4f4fe4d419bbc0f51f148135a871bc14d55360c32"
+      }
+    },
+    "icefish": {
+      "title": "Ice fishing on the frozen lake",
+      "environment": "Frozen lake / winter",
+      "description": "A frozen lake in a snowy winter landscape. A man drills through the ice with a hand auger while a grey husky barks beside a sled.",
+      "excerpt": "A frozen lake in a snowy winter landscape. A man drills through the ice with a hand auger while a grey husky barks beside a sled.",
+      "prompt": "A stationary eye-level view of a frozen lake in a snowy winter landscape under a pale sky, with pine forest on the far shore. A man in a fur hat turns a hand ice auger and drills a hole through the ice, chips of ice spraying, while beside a wooden sled on the other side a grey husky dog barks and howls. Grinding crunching of the ice auger and loud husky barks.",
+      "yaw": -126.0,
+      "pitch": -10.3,
+      "video": "assets/icefish.mp4",
+      "poster": "assets/icefish.jpg",
+      "thumb": "assets/icefish-thumb.jpg",
+      "note": "Spatial audio preview. Use headphones and look around, or use the buttons below to face each sound.",
+      "sources": [
+        {
+          "key": "auger",
+          "label": "Ice auger",
+          "yaw": -139.5,
+          "pitch": -9.0,
+          "prompt": "A man turns a hand ice auger and drills a hole through lake ice. Grinding, crunching ice and scraping metal. No speech, music or additional sound sources."
+        },
+        {
+          "key": "husky",
+          "label": "Husky",
+          "yaw": -112.5,
+          "pitch": -11.7,
+          "prompt": "A grey husky dog stands beside a wooden sled and barks and howls. Loud sharp husky barks and a short howl. No speech, music or additional sound sources."
+        }
+      ],
+      "ambience": {
+        "label": "Ambience",
+        "prompt": "Still cold winter air over a frozen lake with a faint wind. No speech, music, drilling, barking or additional sound sources."
+      },
+      "foa": {
+        "url": "assets/icefish-foa.wav",
+        "sha256": "cfd5135cf1bf2340b00ec7f8876f4528e98da5000c0517def12719c886b08afb"
+      }
+    },
+    "kitchen": {
+      "title": "Evening in the kitchen",
+      "environment": "Home kitchen / evening",
+      "description": "A warm home kitchen in the evening. A cook chops carrots in fast steady strokes while a pot boils on the stove, its lid rattling.",
+      "excerpt": "A warm home kitchen in the evening. A cook chops carrots in fast steady strokes while a pot boils on the stove, its lid rattling.",
+      "prompt": "A stationary eye-level view of a warm cozy home kitchen in the evening. At the counter a cook chops carrots on a wooden cutting board with a large knife in fast steady strokes, while on the stove across the kitchen a pot of water boils with steam rising and its lid rattling. Crisp rhythmic knife chops on the wooden board and bubbling boiling water with a rattling lid.",
+      "yaw": 96.3,
+      "pitch": -13.5,
+      "video": "assets/kitchen.mp4",
+      "poster": "assets/kitchen.jpg",
+      "thumb": "assets/kitchen-thumb.jpg",
+      "note": "Spatial audio preview. Use headphones and look around, or use the buttons below to face each sound.",
+      "sources": [
+        {
+          "key": "knife",
+          "label": "Knife",
+          "yaw": 96.3,
+          "pitch": -13.5,
+          "prompt": "A cook chops carrots on a wooden cutting board with a large knife in fast steady strokes. Crisp rhythmic knife chops on wood, each one separate. No speech, music or additional sound sources."
+        },
+        {
+          "key": "pot",
+          "label": "Boiling pot",
+          "yaw": -118.8,
+          "pitch": -6.3,
+          "prompt": "A pot of water boils on a stove with steam rising and its lid rattling. Bubbling boiling water and a lightly rattling lid. No speech, music or additional sound sources."
+        }
+      ],
+      "ambience": {
+        "label": "Ambience",
+        "prompt": "Quiet home kitchen room tone with a faint refrigerator hum. No speech, music, chopping, boiling or additional sound sources."
+      },
+      "foa": {
+        "url": "assets/kitchen-foa.wav",
+        "sha256": "96d4b3286dde324f2eae784e388ffda201a3837dde70156c0e9a3ba10bf067c3"
+      }
+    },
+    "watermill": {
+      "title": "The painted watermill",
+      "environment": "Countryside / summer · stylized",
+      "description": "A hand-painted countryside on a bright summer day. An old watermill drives a wooden hammer into a stone mortar beside a clear stream.",
+      "excerpt": "A hand-painted countryside on a bright summer day. An old watermill drives a wooden hammer into a stone mortar beside a clear stream.",
+      "prompt": "A hand-painted anime-style countryside on a bright summer day with green rice fields and soft white clouds. Beside a thatched hut an old wooden watermill turns and drives a heavy wooden hammer that lifts and thumps down into a stone mortar in a steady rhythm, while on the other side of the view a clear stream flows over stones. Deep wooden thumps of the watermill hammer, creaking wood and a babbling stream.",
+      "yaw": 133.2,
+      "pitch": 2.7,
+      "video": "assets/watermill.mp4",
+      "poster": "assets/watermill.jpg",
+      "thumb": "assets/watermill-thumb.jpg",
+      "note": "Spatial audio preview. Use headphones and look around, or use the buttons below to face each sound.",
+      "sources": [
+        {
+          "key": "watermill",
+          "label": "Watermill",
+          "yaw": 133.2,
+          "pitch": 2.7,
+          "prompt": "An old wooden watermill drives a heavy wooden hammer that thumps into a stone mortar in a steady rhythm. Deep wooden thumps and creaking wood. No speech, music or additional sound sources."
+        },
+        {
+          "key": "stream",
+          "label": "Stream",
+          "yaw": 36.0,
+          "pitch": -20.7,
+          "prompt": "A clear stream flows over stones in the countryside. Bright babbling water. No speech, music or additional sound sources."
+        }
+      ],
+      "ambience": {
+        "label": "Ambience",
+        "prompt": "Calm summer countryside ambience with a light breeze and faint cicadas. No speech, music, thumping, water or additional sound sources."
+      },
+      "foa": {
+        "url": "assets/watermill-foa.wav",
+        "sha256": "b5ed9f54508aadd92435063c752e9831ab0fedfc6b39fb7065fd51563d6502b0"
+      }
+    },
+    "garden": {
+      "title": "Knock of the bamboo fountain",
+      "environment": "Japanese garden / day",
+      "description": "A quiet Japanese garden with raked gravel and moss. A bamboo fountain tips and knocks against a stone while a small stream flows over pebbles.",
+      "excerpt": "A quiet Japanese garden with raked gravel and moss. A bamboo fountain tips and knocks against a stone while a small stream flows over pebbles.",
+      "prompt": "A stationary eye-level view of a quiet Japanese garden with raked gravel, moss and maple trees. Beside a stone basin a bamboo fountain slowly fills with water, tips over and knocks loudly against a stone every few seconds, then swings back up, while a small stream flows over pebbles across the other side of the garden. A sharp hollow wooden knock of the bamboo fountain and a soft trickling stream.",
+      "yaw": -118.8,
+      "pitch": -15,
+      "video": "assets/garden.mp4",
+      "poster": "assets/garden.jpg",
+      "thumb": "assets/garden-thumb.jpg",
+      "note": "Spatial audio preview. Use headphones and look around, or use the buttons below to face each sound.",
+      "sources": [
+        {
+          "key": "spout",
+          "label": "Bamboo fountain",
+          "yaw": -118.8,
+          "pitch": -18.0,
+          "prompt": "A bamboo fountain fills with water, tips over and knocks against a stone every few seconds. Sharp hollow wooden knocks with water pouring. No speech, music or additional sound sources."
+        },
+        {
+          "key": "stream",
+          "label": "Stream",
+          "yaw": 36.0,
+          "pitch": -14.4,
+          "prompt": "A small stream flows over pebbles in a garden. Soft steady trickling water. No speech, music or additional sound sources."
+        }
+      ],
+      "ambience": {
+        "label": "Ambience",
+        "prompt": "Calm garden ambience with a light breeze in the leaves and faint distant birds. No speech, music, knocking, water or additional sound sources."
+      },
+      "foa": {
+        "url": "assets/garden-foa.wav",
+        "sha256": "fe8852a0e7801e1489c265643b35512ec3c40d350a4e98afc16e74ac28d73729"
+      }
+    },
+    "belltower": {
+      "title": "Bells over the morning plaza",
+      "environment": "Town plaza / morning",
+      "description": "A quiet stone plaza in an old town in soft morning light. A bronze bell swings and rings in the tower while a round fountain sprays water.",
+      "excerpt": "A quiet stone plaza in an old town in soft morning light. A bronze bell swings and rings in the tower while a round fountain sprays water.",
+      "prompt": "A quiet stone plaza in an old European town in soft morning light. A tall stone bell tower stands on one side and its bronze bell visibly swings back and forth and rings with each swing, while a round stone fountain on the other side of the plaza sprays water into its basin. Pigeons walk on the cobblestones. Clear resonant bell strikes and splashing fountain water.",
+      "yaw": 119.2,
+      "pitch": 10,
+      "video": "assets/belltower.mp4",
+      "poster": "assets/belltower.jpg",
+      "thumb": "assets/belltower-thumb.jpg",
+      "note": "Spatial audio preview. Use headphones and look around, or use the buttons below to face each sound.",
+      "sources": [
+        {
+          "key": "bell",
+          "label": "Bell",
+          "yaw": 142.2,
+          "pitch": 36.9,
+          "prompt": "A bronze bell swings in a tall stone bell tower and rings with each swing. Clear loud resonant bell strikes with a ringing decay. No speech, music or additional sound sources."
+        },
+        {
+          "key": "fountain",
+          "label": "Fountain",
+          "yaw": 96.3,
+          "pitch": -8.5,
+          "prompt": "A round stone fountain sprays water into its basin. Steady splashing and bubbling fountain water. No speech, music or additional sound sources."
+        }
+      ],
+      "ambience": {
+        "label": "Ambience",
+        "prompt": "Light quiet town ambience in a stone plaza with a soft breeze. No speech, music, bells, fountain or additional sound sources."
+      },
+      "foa": {
+        "url": "assets/belltower-foa.wav",
+        "sha256": "a4681ed81e4441a61a81400298277434b85b51cccd10a2a6b7371b4e8a0030eb"
+      }
+    },
+    "rainforest": {
+      "title": "Macaw by the waterfall",
+      "environment": "Rainforest / day",
+      "description": "A lush tropical rainforest with giant leaves and vines. A red and blue macaw squawks and flaps its wings while a small waterfall splashes into a pool.",
+      "excerpt": "A lush tropical rainforest with giant leaves and vines. A red and blue macaw squawks and flaps its wings while a small waterfall splashes into a pool.",
+      "prompt": "A stationary eye-level view of a lush tropical rainforest with giant leaves and hanging vines. A bright red and blue macaw perches on a branch and squawks loudly while flapping its wings, while on the other side a small waterfall cascades into a rocky pool. Loud harsh macaw squawks and the steady splashing of the waterfall.",
+      "yaw": 91.8,
+      "pitch": -6.3,
+      "video": "assets/rainforest.mp4",
+      "poster": "assets/rainforest.jpg",
+      "thumb": "assets/rainforest-thumb.jpg",
+      "note": "Spatial audio preview. Use headphones and look around, or use the buttons below to face each sound.",
+      "sources": [
+        {
+          "key": "macaw",
+          "label": "Macaw",
+          "yaw": 91.8,
+          "pitch": -6.3,
+          "prompt": "A red and blue macaw perches on a branch and squawks loudly while flapping its wings. Loud harsh squawks. No speech, music or additional sound sources."
+        },
+        {
+          "key": "waterfall",
+          "label": "Waterfall",
+          "yaw": -18.0,
+          "pitch": -15.3,
+          "prompt": "A small waterfall cascades into a rocky pool in a rainforest. Steady splashing and rushing water. No speech, music or additional sound sources."
+        }
+      ],
+      "ambience": {
+        "label": "Ambience",
+        "prompt": "Humid rainforest ambience with soft insects and dripping leaves. No speech, music, squawks, waterfall or additional sound sources."
+      },
+      "foa": {
+        "url": "assets/rainforest-foa.wav",
+        "sha256": "edb60a3a27d4bcb5e47c32dfdfb56ac19c35aaf7056fe9089834f01f31c9f605"
+      }
+    },
+    "court": {
+      "title": "Dribbling at sunset",
+      "environment": "Basketball court / sunset",
+      "description": "An outdoor basketball court at sunset. A young man dribbles hard on the asphalt while a large air conditioning unit hums on a brick wall.",
+      "excerpt": "An outdoor basketball court at sunset. A young man dribbles hard on the asphalt while a large air conditioning unit hums on a brick wall.",
+      "prompt": "An outdoor public basketball court at sunset surrounded by a tall chain-link fence and apartment buildings. A young man in a red jersey dribbles a basketball hard on the asphalt in a steady bouncing rhythm near the hoop, while on the brick wall of a building beside the court a large air conditioning unit runs with its fan spinning. Sharp rhythmic bounces of the basketball on asphalt and the steady droning hum of the air conditioner.",
+      "yaw": 137.2,
+      "pitch": -6.8,
+      "video": "assets/court.mp4",
+      "poster": "assets/court.jpg",
+      "thumb": "assets/court-thumb.jpg",
+      "note": "Spatial audio preview. Use headphones and look around, or use the buttons below to face each sound.",
+      "sources": [
+        {
+          "key": "ball",
+          "label": "Basketball",
+          "yaw": 113.4,
+          "pitch": -17.1,
+          "prompt": "A young man dribbles a basketball hard on an asphalt court in a steady rhythm. Sharp punchy bounces of the ball on asphalt, each one separate. No speech, music or additional sound sources."
+        },
+        {
+          "key": "ac",
+          "label": "Air conditioner",
+          "yaw": 161.1,
+          "pitch": 3.6,
+          "prompt": "A large air conditioning unit runs on a brick wall with its fan spinning. Steady low droning hum and fan whir. No speech, music or additional sound sources."
+        }
+      ],
+      "ambience": {
+        "label": "Ambience",
+        "prompt": "Calm evening city ambience with faint distant traffic. No speech, music, bouncing, air conditioner or additional sound sources."
+      },
+      "foa": {
+        "url": "assets/court-foa.wav",
+        "sha256": "ecaf61fe7472fb64c674d15818f9e314756896391c960b81972f2865cccebef8"
+      }
+    },
+    "gym": {
+      "title": "Rounds in the boxing gym",
+      "environment": "Boxing gym / indoor",
+      "description": "A gritty boxing gym with brick walls. A boxer pounds a heavy punching bag while an athlete skips a jump rope on the wooden floor.",
+      "excerpt": "A gritty boxing gym with brick walls. A boxer pounds a heavy punching bag while an athlete skips a jump rope on the wooden floor.",
+      "prompt": "A stationary eye-level view of a gritty boxing gym with brick walls and a boxing ring. A boxer in red gloves punches a heavy black punching bag in quick hard combinations, the bag swinging with each hit, while on the other side of the gym an athlete skips a jump rope fast, the rope slapping the wooden floor. Heavy thudding punches on the bag and sharp rhythmic slaps of the jump rope.",
+      "yaw": -109.8,
+      "pitch": 2.7,
+      "video": "assets/gym.mp4",
+      "poster": "assets/gym.jpg",
+      "thumb": "assets/gym-thumb.jpg",
+      "note": "Spatial audio preview. Use headphones and look around, or use the buttons below to face each sound.",
+      "sources": [
+        {
+          "key": "bag",
+          "label": "Punching bag",
+          "yaw": -109.8,
+          "pitch": 2.7,
+          "prompt": "A boxer punches a heavy punching bag in quick hard combinations. Heavy deep thudding punches, each one separate. No speech, music or additional sound sources."
+        },
+        {
+          "key": "rope",
+          "label": "Jump rope",
+          "yaw": 104.4,
+          "pitch": -3.6,
+          "prompt": "An athlete skips a jump rope fast on a wooden floor. Sharp rhythmic slaps of the rope on the floor. No speech, music or additional sound sources."
+        }
+      ],
+      "ambience": {
+        "label": "Ambience",
+        "prompt": "Quiet gym room tone with a faint ventilation hum. No speech, music, punches, rope or additional sound sources."
+      },
+      "foa": {
+        "url": "assets/gym-foa.wav",
+        "sha256": "8fe3a8c1553310335ac3f9d8b94f9f56212627044fe757746e1811917d5334e7"
+      }
+    },
+    "study": {
+      "title": "A late night in the study",
+      "environment": "Study / night",
+      "description": "A quiet wood-paneled study at night under a green desk lamp. A writer types on an old typewriter while a small desk fan whirs on a bookshelf.",
+      "excerpt": "A quiet wood-paneled study at night under a green desk lamp. A writer types on an old typewriter while a small desk fan whirs on a bookshelf.",
+      "prompt": "A stationary eye-level view of a quiet wood-paneled study at night lit by a green desk lamp. At a wooden desk a writer types quickly on an old black typewriter, the keys and carriage visibly moving, while on a bookshelf across the room a small metal desk fan oscillates and spins. Crisp clacking typewriter keys with a carriage bell, and the soft steady whir of the fan.",
+      "yaw": 105.3,
+      "pitch": -15,
+      "video": "assets/study.mp4",
+      "poster": "assets/study.jpg",
+      "thumb": "assets/study-thumb.jpg",
+      "note": "Spatial audio preview. Use headphones and look around, or use the buttons below to face each sound.",
+      "sources": [
+        {
+          "key": "typewriter",
+          "label": "Typewriter",
+          "yaw": 105.3,
+          "pitch": -25.6,
+          "prompt": "A writer types quickly on an old black typewriter. Crisp fast clacking keys and an occasional carriage bell. No speech, music or additional sound sources."
+        },
+        {
+          "key": "fan",
+          "label": "Desk fan",
+          "yaw": -53.1,
+          "pitch": 44.1,
+          "prompt": "A small metal desk fan oscillates and spins on a bookshelf. Soft steady whir of the blades. No speech, music or additional sound sources."
+        }
+      ],
+      "ambience": {
+        "label": "Ambience",
+        "prompt": "Very quiet study room tone at night with faint distant outdoor ambience. No speech, music, typing, fan or additional sound sources."
+      },
+      "foa": {
+        "url": "assets/study-foa.wav",
+        "sha256": "dd9e4df6153c40489ecdf9cac0c6637da01ceb977b35a91bc5aa2ba040fb5b0d"
+      }
+    },
+    "alley": {
+      "title": "Neon in the rainy alley",
+      "environment": "City alley / night, rain",
+      "description": "A narrow city alley at night in heavy rain. A broken pink neon sign flickers and buzzes while a drainpipe gushes rainwater onto the pavement.",
+      "excerpt": "A narrow city alley at night in heavy rain. A broken pink neon sign flickers and buzzes while a drainpipe gushes rainwater onto the pavement.",
+      "prompt": "A stationary eye-level view of a narrow city alley at night in heavy rain, the wet pavement reflecting colored light. A broken pink neon sign above a shop door flickers on and off irregularly and buzzes and crackles with each flicker, while a metal drainpipe on the opposite wall gushes rainwater onto the pavement. Sharp electric buzzing crackles of the flickering neon sign and gushing water from the drainpipe.",
+      "yaw": -149.4,
+      "pitch": 10,
+      "video": "assets/alley.mp4",
+      "poster": "assets/alley.jpg",
+      "thumb": "assets/alley-thumb.jpg",
+      "note": "Spatial audio preview. Use headphones and look around, or use the buttons below to face each sound.",
+      "sources": [
+        {
+          "key": "neon",
+          "label": "Neon sign",
+          "yaw": -149.4,
+          "pitch": 28.8,
+          "prompt": "A broken pink neon sign flickers on and off and buzzes and crackles with each flicker. Sharp electric buzzing crackles. No speech, music or additional sound sources."
+        },
+        {
+          "key": "drainpipe",
+          "label": "Drainpipe",
+          "yaw": 113.4,
+          "pitch": -24.3,
+          "prompt": "A metal drainpipe gushes rainwater onto the pavement. Steady gushing and splashing water. No speech, music or additional sound sources."
+        }
+      ],
+      "ambience": {
+        "label": "Ambience",
+        "prompt": "Heavy rain falling in a city alley at night. No speech, music, buzzing, gushing water or additional sound sources."
+      },
+      "foa": {
+        "url": "assets/alley-foa.wav",
+        "sha256": "0017559168b41509365d96e809db293652a7ac8770b75b421cf40f520bb7b721"
+      }
+    },
+    "crossing": {
+      "title": "Railway crossing at dusk",
+      "environment": "Rice fields / dusk",
+      "description": "A rural railway crossing at dusk among green rice fields. The crossing signal flashes and rings while a small wooden windmill turns and creaks.",
+      "excerpt": "A rural railway crossing at dusk among green rice fields. The crossing signal flashes and rings while a small wooden windmill turns and creaks.",
+      "prompt": "A stationary eye-level view of a rural railway level crossing at dusk among green rice fields, with no train in sight. The crossing signal on a striped pole flashes two red lights alternately and its bell rings with each flash, while a small wooden windmill on the edge of a field on the other side turns in the wind and creaks. Fast repeated ding ding of the crossing bell and slow creaking of the windmill.",
+      "yaw": 132.5,
+      "pitch": -1.8,
+      "video": "assets/crossing.mp4",
+      "poster": "assets/crossing.jpg",
+      "thumb": "assets/crossing-thumb.jpg",
+      "note": "Spatial audio preview. Use headphones and look around, or use the buttons below to face each sound.",
+      "sources": [
+        {
+          "key": "signal",
+          "label": "Crossing signal",
+          "yaw": 141.3,
+          "pitch": -4.5,
+          "prompt": "A railway crossing signal flashes two red lights alternately and its bell rings with each flash. Fast repeated metallic dings. No speech, music or additional sound sources."
+        },
+        {
+          "key": "windmill",
+          "label": "Windmill",
+          "yaw": 123.7,
+          "pitch": 0.9,
+          "prompt": "A small wooden windmill turns in the wind at the edge of a field. Slow rhythmic creaking and soft whooshing blades. No speech, music or additional sound sources."
+        }
+      ],
+      "ambience": {
+        "label": "Ambience",
+        "prompt": "Calm rural dusk ambience with a light breeze over rice fields and faint insects. No speech, music, bells, creaking or additional sound sources."
+      },
+      "foa": {
+        "url": "assets/crossing-foa.wav",
+        "sha256": "11155cc6a83aefc8b6d5c1052aafc6df474e753c4c4983d9ae18b608ba6b9fac"
+      }
+    },
+    "construction": {
+      "title": "Midday at the construction site",
+      "environment": "Construction site / day",
+      "description": "An urban construction site on a bright day. A worker drives a jackhammer into the pavement while a cement mixer truck turns its drum.",
+      "excerpt": "An urban construction site on a bright day. A worker drives a jackhammer into the pavement while a cement mixer truck turns its drum.",
+      "prompt": "A stationary eye-level view of an urban construction site on a bright day with scaffolding and stacks of bricks. A worker in a yellow hard hat drives a jackhammer into the concrete pavement, the tool shaking and kicking up dust in short bursts, while on the other side of the site an orange cement mixer truck turns its large drum steadily. Loud rapid pounding bursts of the jackhammer and the low churning rumble of the cement mixer.",
+      "yaw": -11.8,
+      "pitch": -3.6,
+      "video": "assets/construction.mp4",
+      "poster": "assets/construction.jpg",
+      "thumb": "assets/construction-thumb.jpg",
+      "note": "Spatial audio preview. Use headphones and look around, or use the buttons below to face each sound.",
+      "sources": [
+        {
+          "key": "jackhammer",
+          "label": "Jackhammer",
+          "yaw": -46.1,
+          "pitch": -0.9,
+          "prompt": "A worker drives a jackhammer into concrete in short bursts. Loud rapid pounding and rattling bursts with short pauses. No speech, music or additional sound sources."
+        },
+        {
+          "key": "mixer",
+          "label": "Cement mixer",
+          "yaw": 22.5,
+          "pitch": -6.3,
+          "prompt": "A cement mixer truck turns its large drum steadily. Low churning rumble and a diesel engine idle. No speech, music or additional sound sources."
+        }
+      ],
+      "ambience": {
+        "label": "Ambience",
+        "prompt": "Distant city ambience on a bright day with a light breeze. No speech, music, jackhammer, engine or additional sound sources."
+      },
+      "foa": {
+        "url": "assets/construction-foa.wav",
+        "sha256": "987f9e3202a7899a50d29dd5336dff6c7b598c12f6218e4ab79da5f0b46f5e65"
+      }
+    },
+    "factory": {
+      "title": "Rhythm of the factory hall",
+      "environment": "Factory hall / day",
+      "description": "A large factory hall with steel beams and skylights. A hydraulic press slams down in a steady rhythm while a conveyor belt rattles along the wall.",
+      "excerpt": "A large factory hall with steel beams and skylights. A hydraulic press slams down in a steady rhythm while a conveyor belt rattles along the wall.",
+      "prompt": "A stationary eye-level view of a large industrial factory hall with steel beams and skylights. A huge hydraulic stamping press slams down onto a metal sheet and rises again in a steady rhythm, while along the other wall a long conveyor belt carries metal boxes and rattles. Massive rhythmic thuds and clanks of the stamping press and the continuous rattling of the conveyor belt.",
+      "yaw": -146.7,
+      "pitch": -5.4,
+      "video": "assets/factory.mp4",
+      "poster": "assets/factory.jpg",
+      "thumb": "assets/factory-thumb.jpg",
+      "note": "Spatial audio preview. Use headphones and look around, or use the buttons below to face each sound.",
+      "sources": [
+        {
+          "key": "press",
+          "label": "Stamping press",
+          "yaw": -146.7,
+          "pitch": -5.4,
+          "prompt": "A huge hydraulic stamping press slams down onto a metal sheet in a steady rhythm. Massive heavy thuds and metallic clanks, each one separate. No speech, music or additional sound sources."
+        },
+        {
+          "key": "conveyor",
+          "label": "Conveyor belt",
+          "yaw": -10.8,
+          "pitch": -11.7,
+          "prompt": "A long conveyor belt carries metal boxes along a factory wall. Continuous rattling and rolling. No speech, music or additional sound sources."
+        }
+      ],
+      "ambience": {
+        "label": "Ambience",
+        "prompt": "Large factory hall room tone with a low ventilation hum. No speech, music, press, conveyor or additional sound sources."
+      },
+      "foa": {
+        "url": "assets/factory-foa.wav",
+        "sha256": "87b5dd754c7dc4ffc0ef260568e9b942e5bdc9ceb5ccc050a2af3bde961cb2bd"
+      }
+    },
+    "rockyshore": {
+      "title": "Waves on the rocky shore",
+      "environment": "Rocky coast / overcast",
+      "description": "A rugged rocky coastline under an overcast sky. Waves crash against dark rocks while a white seagull calls from a wooden post.",
+      "excerpt": "A rugged rocky coastline under an overcast sky. Waves crash against dark rocks while a white seagull calls from a wooden post.",
+      "prompt": "A stationary eye-level view of a rugged rocky coastline under an overcast sky. Large waves roll in and crash against a group of dark rocks near the shore, bursting into white spray every few seconds, while on a wooden post on the other side of the view a white seagull stands and calls with its beak opening wide. Heavy booming wave crashes with hissing spray and loud seagull calls.",
+      "yaw": -56.1,
+      "pitch": -15,
+      "video": "assets/rockyshore.mp4",
+      "poster": "assets/rockyshore.jpg",
+      "thumb": "assets/rockyshore-thumb.jpg",
+      "note": "Spatial audio preview. Use headphones and look around, or use the buttons below to face each sound.",
+      "sources": [
+        {
+          "key": "waves",
+          "label": "Waves",
+          "yaw": -25.2,
+          "pitch": -19.8,
+          "prompt": "Large waves crash against dark rocks and burst into white spray every few seconds. Heavy booming crashes and hissing spray. No speech, music or additional sound sources."
+        },
+        {
+          "key": "seagull",
+          "label": "Seagull",
+          "yaw": -86.9,
+          "pitch": -14.4,
+          "prompt": "A white seagull stands on a wooden post and calls with its beak opening wide. Loud sharp seagull calls. No speech, music or additional sound sources."
+        }
+      ],
+      "ambience": {
+        "label": "Ambience",
+        "prompt": "Steady sea wind on an overcast coast with a faint distant surf. No speech, music, wave crashes, birds or additional sound sources."
+      },
+      "foa": {
+        "url": "assets/rockyshore-foa.wav",
+        "sha256": "531378f20fe1f61b909853cd25a8b7e9e227dc16dac8401eb239ec30e94f6895"
       }
     }
   }
